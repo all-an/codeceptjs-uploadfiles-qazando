@@ -1,4 +1,7 @@
 const { setHeadlessWhen, setCommonPlugins } = require('@codeceptjs/configure');
+const { setWindowSize } = require('@codeceptjs/configure');
+
+setWindowSize(1920, 1080);
 
 // turn on headless mode when running with HEADLESS=true environment variable
 // export HEADLESS=true && npx codeceptjs run
@@ -8,12 +11,13 @@ setHeadlessWhen(process.env.HEADLESS);
 setCommonPlugins();
 
 exports.config = {
-  tests: '/tests/*_test.js',
+  tests: './*_test.js',
   output: './output',
   helpers: {
-    WebDriver: {
+    Playwright: {
       url: 'http://automationpractice.com/index.php',
-      browser: 'chrome'
+      show: true,
+      browser: 'firefox'
     }
   },
   include: {

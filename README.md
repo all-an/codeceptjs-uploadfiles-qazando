@@ -8,14 +8,12 @@ http://automationpractice.com/index.php
 
 - Node 16.13.1
 - CodeceptJS 3.3.0
-- WebDriver 6.12.1
+- Playwright
 
 ## Instalação e execução:
 
 ```bash
-npx create-codeceptjs .
-npx codeceptjs def
-npm run your_test
+https://codecept.io/quickstart/
 ```
 
 ## Autor:
